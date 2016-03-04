@@ -39,6 +39,9 @@ body {
   padding: 0;
 }
 
+iframe#tumblr_controls {
+  display:none;
+}
 p {
   margin: 0;
   padding: 0;
@@ -140,9 +143,11 @@ img,
 .post:last-child {
   margin-bottom: 0;
 }
+{block:IfCaption}
 .post a {
   margin-top: auto;
 }
+{/block:IfCaption}
 .post img {
   max-height: 80vh;
   padding: 0rem;
@@ -152,6 +157,18 @@ img,
   padding-bottom: 1.66rem;
   max-height: 1.66rem;
   overflow: hidden;
+}
+
+#like-button {
+    position: absolute;
+    top: 4rem;
+    right: 1rem;
+    padding: 1rem;
+}
+
+blockquote {
+  padding: 0;
+  margin: 0;
 }
 
 
@@ -180,6 +197,8 @@ ____________________
   }
   .post img {
     max-height: 80vh;
+  }
+  .post .photoset img {
   }
 
   .post-container {

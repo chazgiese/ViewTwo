@@ -10,9 +10,13 @@
       <meta name="description" content="{MetaDescription}" />
     {/block:Description}
     <link rel="shortcut icon" href="{Favicon}" />
+    <script type="text/javascript"
+src="http://static.tumblr.com/q0etgkr/EIBmz7s0p/infinitescrolling.js" ></script>
+<link href='https://fonts.googleapis.com/css?family=Karla:400,700,400italic' rel='stylesheet' type='text/css'>
     <!--PERSONAL CONTROLS START-->
-    <meta name="color:Background" content="#eaeaea" />
+    <meta name="color:Background" content="#ffffff" />
     <meta name="font:Body" content="'Karla'" />
+    <meta name="if:Caption" content="0">
     <meta name="if:ArchiveLink" content="0"/>
     <meta name="text:Link 1 Name" content=""/>
     <meta name="text:Link 1 URL" content=""/>
@@ -22,8 +26,6 @@
     <meta name="text:Link 3 URL" content=""/>
     <meta name="text:Link 4 Name" content=""/>
     <meta name="text:Link 4 URL" content=""/>
-    <meta name="text:Instagram Link Title" content=""/>
-    <meta name="text:Instagram URL" content=""/>
     <!--PERSONAL CONTROLS END-->
     <style type="text/css">
 
@@ -46,6 +48,9 @@
       padding: 0;
     }
 
+    iframe#tumblr_controls {
+      display:none;
+    }
     p {
       margin: 0;
       padding: 0;
@@ -147,9 +152,11 @@
     .post:last-child {
       margin-bottom: 0;
     }
+    {block:IfCaption}
     .post a {
       margin-top: auto;
     }
+    {/block:IfCaption}
     .post img {
       max-height: 80vh;
       padding: 0rem;
@@ -159,6 +166,25 @@
       padding-bottom: 1.66rem;
       max-height: 1.66rem;
       overflow: hidden;
+    }
+
+    .photoset {
+      display: none;
+    }
+
+    #like-reblog {
+        position: absolute;
+        top: 3.33rem;
+        right: 1rem;
+        z-index: 999
+    }
+    #like-reblog a {
+        margin: .33rem 0;
+    }
+
+    blockquote {
+      padding: 0;
+      margin: 0;
     }
 
 
@@ -189,6 +215,7 @@
         max-height: 80vh;
       }
 
+
       .post-container {
         padding: 5vh 3rem 0;
         flex-direction: -webkit-row;
@@ -197,6 +224,7 @@
         flex-wrap: wrap;
       }
     }
+
 
 
     </style>
@@ -232,7 +260,7 @@
         <a href="/" id="title">{Title}</a>
       </div>
       <div id="nav-right">
-        <a href="/archive">Follow</a>
+        <a href="http://www.tumblr.com/follow/{Name}">Follow</a>
       </div>
     </nav>
   </header><!--NAVIGATION END-->
@@ -243,23 +271,29 @@
 
       {block:Photo}<!--PHOTO POST-->
       <div class="post photo">
+        {block:PermalinkPage}
+          <div id="like-reblog">
+            {LikeButton color="black" size="18"}
+            {ReblogButton color="black" size="18"}
+          </div>
+        {/block:PermalinkPage}
         <a href="{Permalink}">
-          <img src="{PhotoURL-HiRes}" />
+          <img src="{PhotoURL-HighRes}" />
         </a>
-        {block:IfCaption}{block:Caption}<p>{Caption}</p>{/block:Caption}{/block:IfCaption}
+        {block:IfCaption}{block:Caption}{Caption}{/block:Caption}{/block:IfCaption}
       </div>
       {/block:Photo}<!--PHOTO POSTS END-->
 
-      {block:Photoset}<!--PHOTOSET POSTS-->
+      <!-- {block:Photoset}PHOTOSET POSTS
       <div class="post photoset">
-        {Photoset-700}
+        	<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}">
         {block:IfCaption}{block:Caption}{Caption}{/block:Caption}{/block:IfCaption}
       </div>
-      {/block:Photoset}<!--PHOTOSET POSTS END-->
+      {/block:Photoset}--PHOTOSET POSTS END---->
 
       {block:Video}<!--VIDEO POSTS-->
       <div class="post video">
-        {Video-700}
+        {Video-300}
         {block:IfCaption}{block:Caption}{Caption}{/block:Caption}{/block:IfCaption}
       </div>
       {/block:Video}<!--VIDEO POSTS END-->
