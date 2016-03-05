@@ -3,19 +3,19 @@
 
   _
   Todo:
-  • add tumblr if statement adjustments
+  x add tumblr if statement adjustments
     for caption show/hide
   • infinite scroll
     - backup pagination
   • css animations
-  • permalink page
+  x permalink page
     - reglog/like controls
     - captions
     - source
     - tags
     - notes
   • info overlay
-  • clean up css/html
+  x clean up css/html
   _
 
 */
@@ -40,7 +40,7 @@ body {
 }
 
 iframe#tumblr_controls {
-  display:none;
+  display: none;
 }
 p {
   margin: 0;
