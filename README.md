@@ -16,7 +16,11 @@ How to Install
                                   .tumblr
                                      .com
 
+<<<<<<< HEAD
   w/♥︎,``z
+=======
+  w/♥︎,
+>>>>>>> origin/master
   www.chazgie.se
 
 -->
@@ -43,8 +47,12 @@ How to Install
     <!-- <meta name="if:Controls On Index" content="0"/> -->
     <!--<meta name="font:PostCaption" content="'Karla'"/>-->
     <meta name="if:Archive Link" content="1"/>
+<<<<<<< HEAD
     <meta name="if:Dashboard Link" content="0"/>
     <!-- <meta name="if:Caption" content="0"/> -->
+=======
+    <meta name="if:Caption" content="1"/>
+>>>>>>> origin/master
     <meta name="if:Ask Link" content="0"/>
     <meta name="text:Link 1 Name" content=""/>
     <meta name="text:Link 1 URL" content=""/>
@@ -93,8 +101,12 @@ How to Install
     }
     .post-container,
     .post,
+<<<<<<< HEAD
     nav,
     .tumblr-controls {
+=======
+    nav {
+>>>>>>> origin/master
       display: -webkit-flex;
       display: flex;
       justify-content: center;
@@ -116,6 +128,12 @@ How to Install
     nav a:hover {
       color: {color:Nav Text Hover Color};
     }
+<<<<<<< HEAD
+=======
+    .post p {
+      font-family: {PostCaption};
+    }
+>>>>>>> origin/master
     /*
     ________________
           NAVIGATION
@@ -143,12 +161,17 @@ How to Install
       margin-right: auto;
     }
     #nav-left a {
+<<<<<<< HEAD
       padding-right: 0.66rem;
+=======
+      padding-right: 0.33rem;
+>>>>>>> origin/master
     }
     #nav-right {
       margin-left: auto;
       text-align: right;
     }
+<<<<<<< HEAD
     #nav-right a {
       padding-left: 0.66rem;
     }
@@ -165,18 +188,30 @@ How to Install
     }
     {/block:IfDashboardLink}
 
+=======
+    #archive,
+    #ask {
+      display: none;
+    }
+>>>>>>> origin/master
     {block:IfArchiveLink}
     #archive {
       display: inline-block;
     }
     {/block:IfArchiveLink}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
     {block:IfAskLink}
     #ask {
       display: inline-block;
     }
     {/block:IfAskLink}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
     #hi {
       position: fixed;
       bottom: 3rem;
@@ -232,6 +267,7 @@ How to Install
       max-height: 1.66rem;
       overflow: hidden;
     }
+<<<<<<< HEAD
 
     .photoset a {
       display: none;
@@ -245,6 +281,34 @@ How to Install
       justify-content: space-between;
     }
 
+=======
+    {block:PermalinkPage}
+        .post {
+          height: auto;
+        }
+        .post p {
+          height: auto;
+          overflow: visible;
+        }
+    {block:PermalinkPage}
+    .photoset {
+      display: none;
+    }
+    #like-reblog {
+        position: fixed;
+        top: 3.322rem;
+        right: 1rem;
+        z-index: 999
+    }
+    #like-reblog a {
+        margin: .33rem 0;
+    }
+    /*blockquote {
+      padding: 0;
+      margin: 0;
+      display: none;
+    }*/
+>>>>>>> origin/master
     /*
     ____________________
           TABLET/DESKTOP
@@ -262,12 +326,24 @@ How to Install
       .post {
         flex-basis: 50%;
         max-width: 50%;
+<<<<<<< HEAD
         height: 97vh;
         max-height: 97vh;
         padding: 1.33rem;
       }
       .post-container {
         padding: 3vh 3rem 0;
+=======
+        height: 95vh;
+        max-height: 95vh;
+        padding: 1.33rem;
+      }
+      .post img {
+        max-height: 80vh;
+      }
+      .post-container {
+        padding: 5vh 3rem 0;
+>>>>>>> origin/master
         flex-direction: -webkit-row;
         flex-direction: row;
         flex-wrap: -webkit-wrap;
@@ -309,7 +385,10 @@ How to Install
         <a href="/" id="title">{Title}</a>
       </div>
       <div id="nav-right">
+<<<<<<< HEAD
         <a href="http://www.tumblr.com/" id="dashboard">Dashboard</a>
+=======
+>>>>>>> origin/master
         <a href="http://www.tumblr.com/follow/{Name}">Follow</a>
       </div>
     </nav>
@@ -322,7 +401,11 @@ How to Install
       {block:Photo}<!--PHOTO POST-->
       <div class="post photo">
         {block:PermalinkPage}
+<<<<<<< HEAD
           <div class="tumblr-controls perma">
+=======
+          <div class="tControls perma">
+>>>>>>> origin/master
             {LikeButton color="black" size="18"}
             {ReblogButton color="black" size="18"}
           </div>
@@ -332,7 +415,11 @@ How to Install
         </a>
         {block:IndexPage}
           {block:IfControlsOnIndex}
+<<<<<<< HEAD
           <div class="tumblr-controls index">
+=======
+          <div class="tControls index">
+>>>>>>> origin/master
             {LikeButton color="black" size="18"}
             {ReblogButton color="black" size="18"}
           </div>
@@ -340,6 +427,7 @@ How to Install
         {/block:IndexPage}
 
         {block:IfCaption}{block:Caption}{Caption}{/block:Caption}{/block:IfCaption}
+<<<<<<< HEAD
       </div>
       {/block:Photo}<!--PHOTO POSTS END-->
 
@@ -349,6 +437,43 @@ How to Install
         {block:IfCaption}{block:Caption}{Caption}{/block:Caption}{/block:IfCaption}
       </div>
       {/block:Photoset} <!--PHOTOSET POSTS END---->
+=======
+
+      </div>
+      <!-- <div>
+      {block:PermalinkPage}
+      {block:NoteCount}
+          {NoteCountWithLabel}
+      {/block:NoteCount}
+      {block:Date}⌚︎ {DayOfWeek} {Year} / {MonthNumberWithZero} / {DayOfMonthWithZero} {24Hour}:{Minutes}:{Seconds}
+      {/block:Date}
+      {block:RebloggedFrom}
+        <a href="{ReblogParentURL}">
+          thru: {ReblogParentName}
+        </a>
+      {/block:RebloggedFrom}
+      {block:ContentSource}Source: {SourceTitle}{/block:ContentSource}
+      {block:HasTags}
+        {block:Tags}
+        <a href="{TagURL}">
+          {Tag}
+        </a>
+        {/block:Tags}
+        {/block:HasTags}
+        {block:PostNotes}
+        {PostNotes}
+        {/block:PostNotes}
+      {/block:PermalinkPage}
+    </div> -->
+      {/block:Photo}<!--PHOTO POSTS END-->
+
+      <!-- {block:Photoset}PHOTOSET POSTS
+      <div class="post photoset">
+        	<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}">
+        {block:IfCaption}{block:Caption}{Caption}{/block:Caption}{/block:IfCaption}
+      </div>
+      {/block:Photoset}  PHOTOSET POSTS END---->
+>>>>>>> origin/master
 
       {block:Video}<!--VIDEO POSTS-->
       <div class="post video">
@@ -418,5 +543,8 @@ How to Install
   </body>
 
 </html>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 ```
