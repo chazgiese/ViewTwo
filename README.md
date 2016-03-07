@@ -6,7 +6,7 @@ ViewTwo (Tumblr Theme)
 
 How to Install
 -----
-####Download the [ViewTwo.html](https://github.com/chazgiese/ViewTwo/blob/master/ViewTwo.html) file or copy and paste the code below into the "Custom html" section of your tumblr. I recommend downloading the ViewTwo.html file because this way you ensure you're getting the most up to date version.
+####Download the [ViewTwo.html](https://github.com/chazgiese/ViewTwo/blob/master/ViewTwo.html) file and/or copy and paste the code below into the "Edit HTML" section of your tumblr. I recommend downloading the ViewTwo.html file because this way you ensure you're getting the most up to date version.
 
 ```html
 <!DOCTYPE html>
