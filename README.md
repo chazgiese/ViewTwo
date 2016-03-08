@@ -16,7 +16,7 @@ How to Install
                                   .tumblr
                                      .com
 
-  w/♥︎,``z
+  w/♥
   www.chazgie.se
 
 -->
